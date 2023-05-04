@@ -53,7 +53,7 @@ with col1:
                 [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain1)") 
 
 with col2:
-    st.image(image='img_strain1.png', width=400, caption="Strains4Pain")
+    st.image(image='cannabis.png', width=335, caption="Strains4Pain")
 
 st.markdown("## Enter Your Simptoms")
 
