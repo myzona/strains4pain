@@ -48,9 +48,9 @@ with col1:
                  reduce chronic inflammation and pain. CBD also affects opioid receptors. Opioid receptors are important in \
                 regulating pain; this is why opioids are prescribed for chronic pain treatment. CBD binds to opioid receptors and alters \
                 how they respond to stimuli, ultimately reducing pain.This tool \
-                will help you improve your pain by recommending best Canabbis strains for pain. This tool \
+                will help you improve your pain by recommending best Canabbis strains for pain. \n\nThis tool \
                 is powered by [LangChain](https://langchain.com/) and [OpenAI](https://openai.com) and made by \
-                [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain1)") 
+                [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain)") 
 
 with col2:
     st.image(image='cannabis.png', width=335, caption="Strains4Pain")
