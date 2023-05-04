@@ -3,26 +3,26 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 
 template = """
+    You are the AI who is the best in finding canabis strains for pain. 
     Your goal is to:
-    - Find canabis strain that will help with pain based on simptoms and desired effects
+    - Find canabis strains that will help with pain based on simptoms and desired effects.
+    - List strains with their effects and simptoms based on terpens.
+    - Summarize with recommendations.
 
     Here are some examples different Pains:
-    - Acute: Acute pain happens quickly and goes away when there is no cause.
-    - Chronic Pain: Lasts longer than six months and can continue when the injury or illness has been treated.  
+    - Acute: For Acute pain reccomend Hybrid strains.
+    - Chronic Pain: For Chronic pain reccomend Indica strains.  
 
-    Here are some examples of words in different effects:
-    - Indica: Relaxed, hungry, sleepy.
-    - Sativa: energetic, creative, focused
-    
-
-    Please start the recommendation with a warm introduction.
+    Here are some examples of strains with different effects:
+    - Indica: Indica strains are known for their relaxing effects. Many people use indica strains to help them feel more relaxed and sleepy.
+    - Sativa: Sativa strains are known for their uplifting effects. Many people use sativa strains to help them feel more energized and awake.
     
     Below is the pain, effects, and simptoms:
     # PAIN: {pain} 
     # EFFECTS: {effects}
     # SIMPTOMS: {simptoms}
     
-    YOUR RESPONSE:
+    YOUR RESPONSE: Based on your {simptoms} and desired {effects}, I recommend the following strains:
 """
 
 
@@ -52,12 +52,16 @@ with col1:
                 [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain1)") 
 
 with col2:
-    st.image(image='img_strain1.png', width=440, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
+    st.image(image='img_strain1.png', width=400, caption="Strains4Pain")
 
 st.markdown("## Enter Your Simptoms")
 
+#def get_api_key():
+#   input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
+#    return input_text
+
 def get_api_key():
-    input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
+    input_text = st.secrets["OPENAI_API_KEY"]
     return input_text
 
 openai_api_key = get_api_key()
@@ -71,7 +75,7 @@ with col1:
 with col2:
     option_dialect = st.selectbox(
         'Which Effects would you like?',
-        ('Sativa', 'Indica'))
+        ('Relaxing effects', 'Uplifting effects'))
 
 def get_text():
     input_text = st.text_area(label="Input", label_visibility='collapsed', placeholder="Your Simptoms...", key="email_input")
@@ -87,7 +91,7 @@ def update_text_with_example():
     print ("in updated")
     st.session_state.email_input = "I can't sleep and I have a headache. I would like to feel relaxed and sleepy."
 
-st.button("*Tell me*", type='secondary', help="Click to see an example of the email you will be converting.", on_click=update_text_with_example)
+st.button("*See An Example*", type='secondary', help="Click to see an strain recommendations.", on_click=update_text_with_example)
 
 st.markdown("### Your Recommendations:")
 
