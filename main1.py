@@ -37,8 +37,8 @@ def load_LLM(openai_api_key):
     llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
     return llm
 
-st.set_page_config(page_title="Strain$pain", page_icon=":robot:")
-st.header("Strain4pain")
+st.set_page_config(page_title="Strains4pain", page_icon=":robot:")
+st.header("Strains for Pain")
 
 col1, col2 = st.columns(2)
 
