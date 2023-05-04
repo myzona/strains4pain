@@ -52,7 +52,7 @@ with col1:
                 [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain1)") 
 
 with col2:
-    st.image(image='img_strain1.png', width=500, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
+    st.image(image='img_strain1.png', width=440, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
 
 st.markdown("## Enter Your Simptoms")
 
