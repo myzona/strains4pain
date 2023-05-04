@@ -7,7 +7,7 @@ template = """
     Your goal is to:
     - Find canabis strains that will help with pain based on simptoms and desired effects.
     - List strains with their effects and simptoms they help.
-    - List terpens in each strain.
+    - List terpens in each strain and they benefits.
     - Summarize with recommendations.
 
     Here are some examples different Pains:
