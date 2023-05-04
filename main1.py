@@ -43,14 +43,13 @@ st.header("Strains for Pain")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("Cannabinoids, such as tetrahydrocannabinol (THC) and cannabidiol (CBD), are found in cannabis. \n\n \
-                CBD can help reduce chronic inflammation and pain. CBD also affects opioid receptors. Opioid receptors are important in \
-                regulating pain; this is why opioids are \ prescribed for chronic pain treatment. CBD binds to opioid receptors and alters \
+    st.markdown("Cannabinoids, such as tetrahydrocannabinol (THC) and cannabidiol (CBD), are found in cannabis. \n\n CBD can help\
+                 reduce chronic inflammation and pain. CBD also affects opioid receptors. Opioid receptors are important in \
+                regulating pain; this is why opioids are prescribed for chronic pain treatment. CBD binds to opioid receptors and alters \
                 how they respond to stimuli, ultimately reducing pain.This tool \
                 will help you improve your pain by recommending best Canabbis strains for pain. This tool \
                 is powered by [LangChain](https://langchain.com/) and [OpenAI](https://openai.com) and made by \
-                [@myzona](https://github.com/myzona). \n\n \
-                View Source Code on [Github](https://github.com/myzona/strains4pain1)")
+                [@myzona](https://github.com/myzona). \n\n View Source Code on [Github](https://github.com/myzona/strains4pain1)") 
 
 with col2:
     st.image(image='img_strain1.png', width=500, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
