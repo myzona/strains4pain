@@ -5,7 +5,7 @@ from langchain.llms import OpenAI
 template = """
     You are the AI who is the best in finding canabis strains for pain. 
     Your goal is to:
-    - Find canabis strains that will help with pain based on simptoms and desired effects.
+    - Find up to 3 canabis strains that will help with pain based on simptoms and desired effects.
     - List strains with their effects and simptoms they help.
     - List terpens in each strain and they benefits.
     - Summarize with recommendations.
@@ -35,7 +35,7 @@ prompt = PromptTemplate(
 def load_LLM(openai_api_key):
     """Logic for loading the chain you want to use should go here."""
     # Make sure your openai_api_key is set as an environment variable
-    llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
+    llm = OpenAI(temperature=.9, openai_api_key=openai_api_key)
     return llm
 
 st.set_page_config(page_title="Strains4pain", page_icon=":robot:")
@@ -56,6 +56,8 @@ with col2:
     st.image(image='cannabis.png', width=335, caption="Strains4Pain")
 
 st.markdown("## Enter Your Simptoms")
+
+
 
 #def get_api_key():
 #   input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
